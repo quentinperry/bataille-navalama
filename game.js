@@ -122,7 +122,7 @@
 
   // ---- Phase de bataille ----
   function playerShoot(r, c) {
-    if (!battleOn || busy || enemyShots[r][c]) return;
+    if (!battleOn || busy || playerShots[r][c]) return;
     busy = true;
     const hit = enemyGrid[r][c] === 1;
     if (hit) {
