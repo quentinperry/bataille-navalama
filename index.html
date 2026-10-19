@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bataille Navale Lama 🦙 vs Mouton 🐑</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>⚓ Bataille Navale : Lama vs Mouton 🌊</h1>
+  <p class="tagline">Le capitaine <strong>Léo le Lama</strong> affronte le capitaine <strong>Wooly le Mouton</strong> ! Qui régnera sur les mers ?</p>
+</header>
+
+<main>
+  <div class="captain captain-llama">
+    <span class="emoji">🦙</span>
+    <h2>Capitaine Léo</h2>
+    <p id="llama-msg">En garde, minou laineux !</p>
+  </div>
+
+  <section id="game-area">
+    <div id="status">Placez vos bateaux puis coulez la flotte mouton !</div>
+
+    <div id="setup">
+      <h3>🚢 Placez votre flotte (clic pour orienter)</h3>
+      <div id="player-board" class="board"></div>
+      <p>Flotte restante : <span id="ships-left"></span></p>
+      <button id="rotate-btn">🔄 Tourner le bateau</button>
+      <button id="random-btn">🎲 Placement aléatoire</button>
+      <button id="start-btn" disabled>⚔️ Commencer la bataille !</button>
+    </div>
+
+    <div id="battle" class="hidden">
+      <div class="board-wrap">
+        <h3>Votre flotte 🦙</h3>
+        <div id="player-view" class="board"></div>
+      </div>
+      <div class="board-wrap">
+        <h3>Flotte ennemie 🐑 — <em>à vous de tirer !</em></h3>
+        <div id="enemy-board" class="board"></div>
+      </div>
+    </div>
+
+    <div id="gameover" class="hidden">
+      <h2 id="result"></h2>
+      <p id="result-msg"></p>
+      <button id="restart-btn">🔁 Rejouer</button>
+    </div>
+  </section>
+
+  <div class="captain captain-sheep">
+    <span class="emoji">🐑</span>
+    <h2>Capitaine Wooly</h2>
+    <p id="sheep-msg">Bêêête guerre en perspective…</p>
+  </div>
+</main>
+
+<footer>
+  <p>Fait avec 💙 pour les amiraux à quatre pattes.</p>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
